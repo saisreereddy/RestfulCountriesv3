@@ -99,7 +99,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<div style=\"text-align:center\">\n  <div class=\"container-fluid-1\">\n    \n     <nav class=\"navbar navbar-default\">\n      <div class=\"container-fluid\">\n        <!-- Brand and toggle get grouped for better mobile display -->\n        <div class=\"navbar-header\">\n          <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\" aria-expanded=\"false\">\n            <span class=\"sr-only\">Toggle navigation</span>\n            <span class=\"icon-bar\"></span>\n            <span class=\"icon-bar\"></span>\n            <span class=\"icon-bar\"></span>\n          </button>\n          \n        </div>\n    \n        <!-- Collect the nav links, forms, and other content for toggling -->\n        <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">\n          <ul class=\"nav navbar-nav\">\n            <li><a [routerLink]=\"['/region']\">Home</a></li>\n            <li><a [routerLink]=\"['/about']\">About</a></li>\n\n          </ul>\n            <ul class=\"nav navbar-nav navbar-right\">\n            <li> <a class=\"btn\" (click)=\"goBackToPreviousPage()\">Go Back </a></li>\n            </ul>\n           \n            \n        \n        </div><!-- /.navbar-collapse -->\n       \n      </div><!-- /.container-fluid -->\n    </nav>\n    <div class=\"row header\">\n        <div class=\"col-md-12\">\n <!-- <a class=\"title_style\" [routerLink]=\"['/']\"><img src=\"assets\\Images\\got.jpg\" class=\"img-responsive img1_style\"></a>-->\n        </div>\n      </div>\n  </div>\n  \n  <br/>\n <router-outlet></router-outlet>\n \n \n<ng4-loading-spinner> </ng4-loading-spinner>\n"
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<div style=\"text-align:center\">\n  <div class=\"container-fluid-1\">\n    \n     <nav class=\"navbar navbar-default\">\n      <div class=\"container-fluid\">\n        <!-- Brand and toggle get grouped for better mobile display -->\n        <div class=\"navbar-header\">\n          <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\" aria-expanded=\"false\">\n            <span class=\"sr-only\">Toggle navigation</span>\n            <span class=\"icon-bar\"></span>\n            <span class=\"icon-bar\"></span>\n            <span class=\"icon-bar\"></span>\n          </button>\n          \n        </div>\n    \n        <!-- Collect the nav links, forms, and other content for toggling -->\n        <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">\n          <ul class=\"nav navbar-nav\">\n            <li><a class=\"font-weight\" [routerLink]=\"['/region']\">Home</a></li>\n            <li><a class=\"font-weight\" [routerLink]=\"['/about']\">About</a></li>\n\n          </ul>\n            <ul class=\"nav navbar-nav navbar-right\">\n            <li> <a class=\"btn font-weight\" (click)=\"goBackToPreviousPage()\">Go Back </a></li>\n            </ul>\n           \n            \n        \n        </div><!-- /.navbar-collapse -->\n       \n      </div><!-- /.container-fluid -->\n    </nav>\n    <div class=\"row header\">\n        <div class=\"col-md-12\">\n <!-- <a class=\"title_style\" [routerLink]=\"['/']\"><img src=\"assets\\Images\\got.jpg\" class=\"img-responsive img1_style\"></a>-->\n        </div>\n      </div>\n  </div>\n  \n  <br/>\n <router-outlet></router-outlet>\n \n \n<ng4-loading-spinner> </ng4-loading-spinner>\n"
 
 /***/ }),
 
@@ -110,6 +110,8 @@ module.exports = "<!--The content below is only a placeholder and can be replace
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__("../../../common/esm5/common.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ng2_toastr_ng2_toastr__ = __webpack_require__("../../../../ng2-toastr/ng2-toastr.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ng2_toastr_ng2_toastr___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_ng2_toastr_ng2_toastr__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -121,10 +123,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var AppComponent = /** @class */ (function () {
-    function AppComponent(location) {
+    function AppComponent(location, toastr, vcr) {
         this.location = location;
+        this.toastr = toastr;
+        this.vcr = vcr;
         this.title = 'app';
+        this.toastr.setRootViewContainerRef(vcr);
     }
     AppComponent.prototype.ngOnInit = function () {
     };
@@ -137,7 +143,7 @@ var AppComponent = /** @class */ (function () {
             template: __webpack_require__("../../../../../src/app/app.component.html"),
             styles: [__webpack_require__("../../../../../src/app/app.component.css")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common__["f" /* Location */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common__["Location"], __WEBPACK_IMPORTED_MODULE_2_ng2_toastr_ng2_toastr__["ToastsManager"], __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewContainerRef"]])
     ], AppComponent);
     return AppComponent;
 }());
@@ -168,12 +174,15 @@ var AppComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__singlecountryview_singlecountryview_component__ = __webpack_require__("../../../../../src/app/singlecountryview/singlecountryview.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__filter_pipe__ = __webpack_require__("../../../../../src/app/filter.pipe.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__filterunique_pipe__ = __webpack_require__("../../../../../src/app/filterunique.pipe.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_ng2_toastr_ng2_toastr__ = __webpack_require__("../../../../ng2-toastr/ng2-toastr.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_ng2_toastr_ng2_toastr___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_16_ng2_toastr_ng2_toastr__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -206,10 +215,11 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_15__filterunique_pipe__["a" /* FilteruniquePipe */]
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
+                __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["BrowserModule"],
                 __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
                 __WEBPACK_IMPORTED_MODULE_6__angular_common_http__["b" /* HttpClientModule */],
                 __WEBPACK_IMPORTED_MODULE_4__angular_forms__["a" /* FormsModule */],
+                __WEBPACK_IMPORTED_MODULE_16_ng2_toastr_ng2_toastr__["ToastModule"].forRoot(),
                 __WEBPACK_IMPORTED_MODULE_2_ng4_loading_spinner__["Ng4LoadingSpinnerModule"].forRoot(),
                 __WEBPACK_IMPORTED_MODULE_5__angular_router__["c" /* RouterModule */].forRoot([
                     { path: 'region', component: __WEBPACK_IMPORTED_MODULE_8__region_region_component__["a" /* RegionComponent */] },
@@ -252,7 +262,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/countryview/countryview.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n\n  <div class=\"container-fluid\" style=\"text-align:center\">\n  \n      <div class=\"col-md-12\" style=\"font-size:20px;font-weight:bold\">Displaying all countries of the selected region</div>\n    </div>\n    <div class=\"row\" style=\"text-align:center\">\n      <div>\n        <!--  <select class=\"form-control-custom\" [(ngModel)]=\"selected\"  placeholder=\"Filter Category By\">\n              <option>Get Countries By Currency Name</option>\n              <ng-container *ngFor=\"let country of selectedRegion;\">\n                <option *ngFor=\"let currency of country.currencies\"> {{currency.name}} </option>\n              </ng-container>    \n          </select>-->\n        <br><br>\n        <div>\n            <input class=\"form-control-custom\" [(ngModel)]=\"searchText\" placeholder=\"Search Countries By Name\">\n          </div>\n          <br><br>\n        <div *ngFor=\"let country of selectedRegion |filter :searchText\"> \n          <div id=\"countries\" class=\"col-md-4\">\n          <div *ngIf=\"country\" class=\"card black font-weight\">\n              <img class=\"card-img-top\" src={{country.flag}} alt=\"Card image\" class=\"img-responsive-custom\">\n              <h4 class=\"card-title\">Country</h4>\n              <div class=\"card-header\">Name : {{country.name}}</div>\n              <div class=\"card-body\"> \n                <div class=\"card-text\">Capital : {{country.capital}}</div>\n                <div class=\"card-text\">Native Name : {{country.nativeName}}</div>\n                <div class=\"card-text\">Subregion : {{country.subregion}}</div>\n               \n                <div *ngFor=\"let currency of country.currencies;let i=index;\">\n                  <div *ngIf=\"i<1\"> \n                <div class=\"card-text\">Currencies : {{currency.name}}</div>\n            </div>\n          </div>\n            \n            </div> \n              \n              <div class=\"card-footer\"><a title=\"Visit Country To Know More Details\"class=\"btn button-custom\" [routerLink]=\"['/singlecountryview',{code : country.alpha2Code}]\" >Visit Country</a></div>\n           \n              <!-- <div class=\"card-body\">{{book.publisher}}</div> \n              <div class=\"card-footer\">{{book.released}} <br/><br/><a [routerLink]=\"['/view',book.url]\" class=\"btn btn-primary\">Details</a></div>-->\n          \n            </div>\n        </div>\n        </div>\n      <div *ngIf=\"allData\">\n        <div *ngFor=\"let country of finalData |filter :searchText\"> \n            <div id=\"countries\" class=\"col-md-4\">\n                <div *ngIf=\"country\" class=\"card black font-weight\">\n                    <img class=\"card-img-top\" src={{country.flag}} alt=\"Card image\" class=\"img-responsive-custom\">\n                    <h4 class=\"card-title\">Country</h4>\n                    <div class=\"card-header\">Name : {{country.name}}</div>\n                    <div class=\"card-body\"> \n                      <div class=\"card-text\">Capital : {{country.capital}}</div>\n                      <div class=\"card-text\">Native Name : {{country.nativeName}}</div>\n                      <div class=\"card-text\">Subregion : {{country.subregion}}</div>\n                     \n                      <div *ngFor=\"let currency of country.currencies;let i=index;\">\n                        <div *ngIf=\"i<1\"> \n                      <div class=\"card-text\">Currencies : {{currency.name}}</div>\n                  </div>\n                </div>\n                  \n                  </div> \n                    \n                    <div class=\"card-footer\"><a title=\"Visit Country To Know More Details\"class=\"btn button-custom\" [routerLink]=\"['/singlecountryview',{code : country.alpha2Code}]\" >Visit Country</a></div>\n                 \n                    <!-- <div class=\"card-body\">{{book.publisher}}</div> \n                    <div class=\"card-footer\">{{book.released}} <br/><br/><a [routerLink]=\"['/view',book.url]\" class=\"btn btn-primary\">Details</a></div>-->\n                \n                  </div>\n          </div>\n          </div>\n        </div>\n  \n        <br/>\n      \n  \n    </div>\n\n  </div>\n  "
+module.exports = "\n\n  <div class=\"container-fluid\" style=\"text-align:center\">\n  \n      <div class=\"col-md-12\"style=\"font-size:22px;font-weight:bold;color: #23527c;font-variant-caps: unicase;font-family: cursive;\">Displaying all countries of the selected region</div>\n    </div>\n    <div class=\"row\" style=\"text-align:center\">\n      <div>\n        <!--  <select class=\"form-control-custom\" [(ngModel)]=\"selected\"  placeholder=\"Filter Category By\">\n              <option>Get Countries By Currency Name</option>\n              <ng-container *ngFor=\"let country of selectedRegion;\">\n                <option *ngFor=\"let currency of country.currencies\"> {{currency.name}} </option>\n              </ng-container>    \n          </select>-->\n        <br><br>\n        <div>\n            <input class=\"form-control-custom\" [(ngModel)]=\"searchText\" placeholder=\"Search Countries By Name\">\n          </div>\n          <br><br>\n        <div *ngFor=\"let country of selectedRegion |filter :searchText\"> \n          <div id=\"countries\" class=\"col-md-4\">\n          <div *ngIf=\"country\" class=\"card black font-weight\">\n              <img class=\"card-img-top\" src={{country.flag}} alt=\"Card image\" class=\"img-responsive-custom\">\n              <h4 class=\"card-title\">Country</h4>\n              <div class=\"card-header\">Name : {{country.name}}</div>\n              <div class=\"card-body\"> \n                <div class=\"card-text\">Capital : {{country.capital}}</div>\n                <div class=\"card-text\">Native Name : {{country.nativeName}}</div>\n                <div class=\"card-text\">Subregion : {{country.subregion}}</div>\n               \n                <div *ngFor=\"let currency of country.currencies;let i=index;\">\n                  <div *ngIf=\"i<1\"> \n                <div class=\"card-text\">Currencies : {{currency.name}}</div>\n            </div>\n          </div>\n            \n            </div> \n              \n              <div class=\"card-footer\"><a title=\"Visit Country To Know More Details\"class=\"btn button-custom\" [routerLink]=\"['/singlecountryview',{code : country.alpha2Code}]\" >Visit Country</a></div>\n           \n              <!-- <div class=\"card-body\">{{book.publisher}}</div> \n              <div class=\"card-footer\">{{book.released}} <br/><br/><a [routerLink]=\"['/view',book.url]\" class=\"btn btn-primary\">Details</a></div>-->\n          \n            </div>\n        </div>\n        </div>\n      <div *ngIf=\"allData\">\n        <div *ngFor=\"let country of finalData |filter :searchText\"> \n            <div id=\"countries\" class=\"col-md-4\">\n                <div *ngIf=\"country\" class=\"card black font-weight\">\n                    <img class=\"card-img-top\" src={{country.flag}} alt=\"Card image\" class=\"img-responsive-custom\">\n                    <h4 class=\"card-title\">Country</h4>\n                    <div class=\"card-header\">Name : {{country.name}}</div>\n                    <div class=\"card-body\"> \n                      <div class=\"card-text\">Capital : {{country.capital}}</div>\n                      <div class=\"card-text\">Native Name : {{country.nativeName}}</div>\n                      <div class=\"card-text\">Subregion : {{country.subregion}}</div>\n                     \n                      <div *ngFor=\"let currency of country.currencies;let i=index;\">\n                        <div *ngIf=\"i<1\"> \n                      <div class=\"card-text\">Currencies : {{currency.name}}</div>\n                  </div>\n                </div>\n                  \n                  </div> \n                    \n                    <div class=\"card-footer\"><a title=\"Visit Country To Know More Details\"class=\"btn button-custom\" [routerLink]=\"['/singlecountryview',{code : country.alpha2Code}]\" >Visit Country</a></div>\n                 \n                    <!-- <div class=\"card-body\">{{book.publisher}}</div> \n                    <div class=\"card-footer\">{{book.released}} <br/><br/><a [routerLink]=\"['/view',book.url]\" class=\"btn btn-primary\">Details</a></div>-->\n                \n                  </div>\n          </div>\n          </div>\n        </div>\n  \n        <br/>\n      \n  \n    </div>\n\n  </div>\n  "
 
 /***/ }),
 
@@ -265,6 +275,8 @@ module.exports = "\n\n  <div class=\"container-fluid\" style=\"text-align:center
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__("../../../common/esm5/common.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__region_service_service__ = __webpack_require__("../../../../../src/app/region-service.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ng2_toastr_ng2_toastr__ = __webpack_require__("../../../../ng2-toastr/ng2-toastr.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ng2_toastr_ng2_toastr___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_ng2_toastr_ng2_toastr__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -278,13 +290,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var CountryviewComponent = /** @class */ (function () {
-    function CountryviewComponent(_route, router, regionService, location) {
+    function CountryviewComponent(_route, router, regionService, location, toastr, vcr) {
         this._route = _route;
         this.router = router;
         this.regionService = regionService;
         this.location = location;
+        this.toastr = toastr;
+        this.vcr = vcr;
         this.finalData = [];
+        this.toastr.setRootViewContainerRef(vcr);
     }
     CountryviewComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -296,6 +312,7 @@ var CountryviewComponent = /** @class */ (function () {
         console.log(myLanguageName);
         if (myRegion) {
             this.regionService.getAllCountriesOfSelectedRegion(myRegion).subscribe(function (data) {
+                _this.toastr.success('Displaying all the countries of the selected region!', 'Success!');
                 //  this.allRegions = data;
                 _this.selectedRegion = data;
                 console.log(_this.selectedRegion);
@@ -308,6 +325,7 @@ var CountryviewComponent = /** @class */ (function () {
         }
         if (myCurrencyName) {
             this.regionService.getAllCountriesOfSelectedCurrencyName().subscribe(function (data) {
+                _this.toastr.success('Currency filter has been applied!', 'Success!');
                 _this.allData = data;
                 console.log(_this.allData);
                 for (var _i = 0, _a = _this.allData; _i < _a.length; _i++) {
@@ -330,6 +348,7 @@ var CountryviewComponent = /** @class */ (function () {
         }
         if (myLanguageName) {
             this.regionService.getAllCountriesOfSelectedCurrencyName().subscribe(function (data) {
+                _this.toastr.success('Language filter has been applied!', 'Success!');
                 _this.allData = data;
                 console.log(_this.allData);
                 for (var _i = 0, _a = _this.allData; _i < _a.length; _i++) {
@@ -359,9 +378,9 @@ var CountryviewComponent = /** @class */ (function () {
             selector: 'app-countryview',
             template: __webpack_require__("../../../../../src/app/countryview/countryview.component.html"),
             styles: [__webpack_require__("../../../../../src/app/countryview/countryview.component.css")],
-            providers: [__WEBPACK_IMPORTED_MODULE_2__angular_common__["f" /* Location */]]
+            providers: [__WEBPACK_IMPORTED_MODULE_2__angular_common__["Location"]]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */], __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */], __WEBPACK_IMPORTED_MODULE_3__region_service_service__["a" /* RegionService */], __WEBPACK_IMPORTED_MODULE_2__angular_common__["f" /* Location */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */], __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */], __WEBPACK_IMPORTED_MODULE_3__region_service_service__["a" /* RegionService */], __WEBPACK_IMPORTED_MODULE_2__angular_common__["Location"], __WEBPACK_IMPORTED_MODULE_4_ng2_toastr_ng2_toastr__["ToastsManager"], __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewContainerRef"]])
     ], CountryviewComponent);
     return CountryviewComponent;
 }());
@@ -420,8 +439,6 @@ var FilterPipe = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FilteruniquePipe; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash__ = __webpack_require__("../../../../lodash/lodash.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_lodash__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -429,13 +446,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 
-
 var FilteruniquePipe = /** @class */ (function () {
     function FilteruniquePipe() {
     }
-    FilteruniquePipe.prototype.transform = function (items, args) {
-        // lodash uniqBy function
-        return __WEBPACK_IMPORTED_MODULE_1_lodash__["uniqBy"](items, args);
+    FilteruniquePipe.prototype.transform = function (value, args) {
+        // Remove the duplicate elements
+        var uniqueItems = Array.from(new Set(value));
+        return uniqueItems;
     };
     FilteruniquePipe = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"])({
@@ -597,7 +614,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/region/region.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n\n  <div class=\"container-fluid\" style=\"text-align:center\">\n    <div class=\"row\" style=\"text-align:center\"></div>\n      <div class=\"col-md-12\" style=\"font-size:20px;font-weight:bold\">Welcome to the <span  style=\"cursor:pointer;\"class=\"api_style\" title=\"Regions\">Regions </span>of the World</div>\n      <br>\n      <div class=\"col-md-12\" style=\"font-size:16px;\">(Please Visit the regions to explore the countries in it)</div>\n      <br><br>\n      \n    </div>\n    <div class=\"row\" style=\"text-align:center\">\n      <div>\n\n          <select class=\"form-control-custom\" [(ngModel)]=\"selected\" (ngModelChange)=\"onSelect(selected)\" placeholder=\"Filter Category By\">\n              <option  [ngValue]=\"undefined\"selected >Get Countries By Currency Name</option>\n              <ng-container *ngFor=\"let country of allData \">\n                <option *ngFor=\"let currency of country.currencies | filterunique:'name'\"> {{currency.name}} </option>\n              </ng-container>    \n          </select>\n       \n      \n            <select class=\"form-control-custom\" [(ngModel)]=\"selected\" (ngModelChange)=\"onSelectLanguage(selected)\" placeholder=\"Filter Category By\">\n                <option  [ngValue]=\"undefined\"selected >Get Countries By Language Name</option>\n                <ng-container *ngFor=\"let country of allData;\">\n                  <option *ngFor=\"let language of country.languages\"> {{language.name}} </option>\n                </ng-container>    \n            </select>\n         \n       \n              <select class=\"form-control-custom\" [(ngModel)]=\"selected\" (ngModelChange)=\"onSelectRegion(selected)\" placeholder=\"Filter Category By\">\n                  <option  [ngValue]=\"undefined\"selected >Get Countries By Region</option>\n              \n                    <option *ngFor=\"let region of allRegions\"> {{region}} </option>\n                 \n              </select>\n            \n        <br><br>\n        \n        <div *ngFor=\"let region of allRegions \"> \n          <div *ngIf=\"region\">\n            <div class=\"container zoom col-md-4\">\n            \n            <img src=\"assets\\Images\\globe3.png\" alt=\"Card image\" style=\"width:50%\">\n         \n          \n              <div class=\"centered\"><a [routerLink]=\"['/countryview',{ regionid : region }]\" style=\"text-decoration:none;\">{{region}}</a></div>\n            </div>\n        </div>\n        </div>\n  \n  \n        <br/>\n      \n  \n    </div>\n  \n  </div>\n  "
+module.exports = "\n\n  <div class=\"container-fluid\" style=\"text-align:center\">\n    <div class=\"row\" style=\"text-align:center\"></div>\n      <div class=\"col-md-12\" style=\"font-size:22px;font-weight:bold;color: #23527c;font-variant-caps: unicase;font-family: cursive;\">Welcome to the <span  style=\"cursor:pointer;\"class=\"api_style\" title=\"Regions\">Regions </span>of the World</div>\n      <br><br><br>\n \n      \n    </div>\n    <div class=\"row\" style=\"text-align:center\">\n      <div>\n\n          <select class=\"form-control-custom\" [(ngModel)]=\"selected\" (ngModelChange)=\"onSelect(selected)\" placeholder=\"Filter Category By\">\n              <option  [ngValue]=\"undefined\"selected >Get Countries By Currency Name</option>\n          \n                <option *ngFor=\"let currency of finalCurrencyNamesArray\"> {{currency}} </option>\n            \n          </select>\n       \n      \n            <select class=\"form-control-custom\" [(ngModel)]=\"selected\" (ngModelChange)=\"onSelectLanguage(selected)\" placeholder=\"Filter Category By\">\n                <option  [ngValue]=\"undefined\"selected >Get Countries By Language Name</option>\n               \n                  <option *ngFor=\"let language of finalLanguageNamesArray\"> {{language}} </option>\n               \n            </select>\n         \n       \n              <select class=\"form-control-custom\" [(ngModel)]=\"selected\" (ngModelChange)=\"onSelectRegion(selected)\" placeholder=\"Filter Category By\">\n                  <option  [ngValue]=\"undefined\"selected >Get Countries By Region</option>\n              \n                    <option *ngFor=\"let region of allRegions\"> {{region}} </option>\n                 \n              </select>\n            \n        <br><br>\n        \n        <div *ngFor=\"let region of allRegions \"> \n          <div *ngIf=\"region\">\n            <div class=\"container zoom col-md-4\">\n            \n            <img src=\"assets\\Images\\globe3.png\" alt=\"Card image\" style=\"width:50%\">\n         \n          \n              <div class=\"centered\"><a [routerLink]=\"['/countryview',{ regionid : region }]\" style=\"text-decoration:none;\">{{region}}</a></div>\n            </div>\n        </div>\n        </div>\n  \n  \n        <br/>\n      \n  \n    </div>\n  \n  </div>\n  "
 
 /***/ }),
 
@@ -612,8 +629,8 @@ module.exports = "\n\n  <div class=\"container-fluid\" style=\"text-align:center
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_animations__ = __webpack_require__("../../../animations/esm5/animations.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ng4_loading_spinner__ = __webpack_require__("../../../../ng4-loading-spinner/ng4-loading-spinner.umd.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ng4_loading_spinner___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_ng4_loading_spinner__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_lodash__ = __webpack_require__("../../../../lodash/lodash.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_lodash__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ng2_toastr_ng2_toastr__ = __webpack_require__("../../../../ng2-toastr/ng2-toastr.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ng2_toastr_ng2_toastr___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_ng2_toastr_ng2_toastr__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -630,11 +647,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var RegionComponent = /** @class */ (function () {
-    function RegionComponent(_route, router, regionService, spinnerService) {
+    function RegionComponent(_route, router, regionService, spinnerService, toastr, vcr) {
         this._route = _route;
         this.router = router;
         this.regionService = regionService;
         this.spinnerService = spinnerService;
+        this.toastr = toastr;
+        this.vcr = vcr;
+        this.toastr.setRootViewContainerRef(vcr);
     }
     RegionComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -642,6 +662,7 @@ var RegionComponent = /** @class */ (function () {
             return self.indexOf(value) === index;
         }
         this.spinnerService.show();
+        this.toastr.info('Please click on regions to know more');
         this.regionService.getAllRegions().subscribe(function (data) {
             _this.spinnerService.hide();
             //  this.allRegions = data;
@@ -649,11 +670,35 @@ var RegionComponent = /** @class */ (function () {
             var result = data.map(function (a) { return a.region; });
             var unique = result.filter(onlyUnique);
             console.log(unique);
+            console.log(_this.allData);
             _this.allRegions = unique;
-            var currencyData = data.map(function (a) { return a.currencies; });
-            console.log(currencyData);
-            var filtered = __WEBPACK_IMPORTED_MODULE_5_lodash__["uniqWith"](currencyData.name, __WEBPACK_IMPORTED_MODULE_5_lodash__["isEqual"]);
-            console.log(filtered);
+            _this.allRegions.sort();
+            var currencyName = [];
+            for (var _i = 0, _a = _this.allData; _i < _a.length; _i++) {
+                var item = _a[_i];
+                for (var _b = 0, _c = item.currencies; _b < _c.length; _b++) {
+                    var currency = _c[_b];
+                    currencyName.push(currency.name);
+                }
+            }
+            console.log(currencyName);
+            var uniqueCurrencyName = currencyName.filter(onlyUnique);
+            console.log(uniqueCurrencyName);
+            _this.finalCurrencyNamesArray = uniqueCurrencyName;
+            var languageName = [];
+            for (var _d = 0, _e = _this.allData; _d < _e.length; _d++) {
+                var item = _e[_d];
+                for (var _f = 0, _g = item.languages; _f < _g.length; _f++) {
+                    var language = _g[_f];
+                    languageName.push(language.name);
+                }
+            }
+            console.log(languageName);
+            var uniqueLanguageName = languageName.filter(onlyUnique);
+            console.log(uniqueLanguageName);
+            _this.finalLanguageNamesArray = uniqueLanguageName;
+            _this.finalCurrencyNamesArray.sort();
+            _this.finalLanguageNamesArray.sort();
         }, function (error) {
             console.log("some error occured");
             console.log(error.errorMessage);
@@ -714,7 +759,7 @@ var RegionComponent = /** @class */ (function () {
                 ])
             ],
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */], __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */], __WEBPACK_IMPORTED_MODULE_2__region_service_service__["a" /* RegionService */], __WEBPACK_IMPORTED_MODULE_4_ng4_loading_spinner__["Ng4LoadingSpinnerService"]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */], __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */], __WEBPACK_IMPORTED_MODULE_2__region_service_service__["a" /* RegionService */], __WEBPACK_IMPORTED_MODULE_4_ng4_loading_spinner__["Ng4LoadingSpinnerService"], __WEBPACK_IMPORTED_MODULE_5_ng2_toastr_ng2_toastr__["ToastsManager"], __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewContainerRef"]])
     ], RegionComponent);
     return RegionComponent;
 }());
@@ -757,6 +802,8 @@ module.exports = "\n\n  <div class=\"container-fluid\" style=\"text-align:center
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__("../../../common/esm5/common.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__region_service_service__ = __webpack_require__("../../../../../src/app/region-service.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ng2_toastr_ng2_toastr__ = __webpack_require__("../../../../ng2-toastr/ng2-toastr.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ng2_toastr_ng2_toastr___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_ng2_toastr_ng2_toastr__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -770,12 +817,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var SinglecountryviewComponent = /** @class */ (function () {
-    function SinglecountryviewComponent(_route, router, regionService, location) {
+    function SinglecountryviewComponent(_route, router, regionService, location, toastr, vcr) {
         this._route = _route;
         this.router = router;
         this.regionService = regionService;
         this.location = location;
+        this.toastr = toastr;
+        this.vcr = vcr;
+        this.toastr.setRootViewContainerRef(vcr);
     }
     SinglecountryviewComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -783,6 +834,7 @@ var SinglecountryviewComponent = /** @class */ (function () {
         var myCountry = this._route.snapshot.paramMap.get('code');
         console.log(myCountry);
         this.regionService.getSelectedCountryInformation(myCountry).subscribe(function (data) {
+            _this.toastr.success('Displaying all the information of the selected selected country!', 'Success!');
             //  this.allRegions = data;
             _this.selectedCountry = [data];
             console.log(_this.selectedCountry);
@@ -799,9 +851,9 @@ var SinglecountryviewComponent = /** @class */ (function () {
             selector: 'app-singlecountryview',
             template: __webpack_require__("../../../../../src/app/singlecountryview/singlecountryview.component.html"),
             styles: [__webpack_require__("../../../../../src/app/singlecountryview/singlecountryview.component.css")],
-            providers: [__WEBPACK_IMPORTED_MODULE_2__angular_common__["f" /* Location */]]
+            providers: [__WEBPACK_IMPORTED_MODULE_2__angular_common__["Location"]]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */], __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */], __WEBPACK_IMPORTED_MODULE_3__region_service_service__["a" /* RegionService */], __WEBPACK_IMPORTED_MODULE_2__angular_common__["f" /* Location */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */], __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */], __WEBPACK_IMPORTED_MODULE_3__region_service_service__["a" /* RegionService */], __WEBPACK_IMPORTED_MODULE_2__angular_common__["Location"], __WEBPACK_IMPORTED_MODULE_4_ng2_toastr_ng2_toastr__["ToastsManager"], __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewContainerRef"]])
     ], SinglecountryviewComponent);
     return SinglecountryviewComponent;
 }());
