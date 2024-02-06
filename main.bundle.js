@@ -558,7 +558,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var RegionService = /** @class */ (function () {
     function RegionService(_http) {
         this._http = _http;
-        this.baseUrl = 'https://restcountries.com/v2/all';
+        this.baseUrl = 'https://restcountries.com/v2';
         console.log("RegionService is called");
     }
     RegionService.prototype.handleError = function (err) {
